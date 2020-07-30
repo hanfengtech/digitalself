@@ -1,40 +1,34 @@
 import dependencies.AndroidTestDependencies
 import dependencies.TestDependencies
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.dynamic-feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion AndroidConfig.COMPILE_SDK_VERSION
-    buildToolsVersion AndroidConfig.BUILD_TOOLS_VERSION
 
     defaultConfig {
-        applicationId AndroidConfig.APPLICATION_ID
         minSdkVersion AndroidConfig.MIN_SDK_VERSION
         targetSdkVersion AndroidConfig.TARGET_SDK_VERSION
 
         versionCode AndroidConfig.VERSION_CODE
         versionName AndroidConfig.VERSION_NAME
-
-        testInstrumentationRunner AndroidConfig.TEST_INSTRUMENTATION_RUNNER
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
 
     buildFeatures {
         dataBinding true
     }
 
-    dynamicFeatures = [':features:home']
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(Modules.APP)
+
     implementation Dependencies.KOTLIN
     implementation Dependencies.CORE_KTX
     implementation Dependencies.APPCOMPAT
@@ -59,4 +53,5 @@ dependencies {
     testImplementation TestDependencies.JUNIT
     androidTestImplementation AndroidTestDependencies.JUNIT
     androidTestImplementation AndroidTestDependencies.ESPRESSO
+    androidTestImplementation AndroidTestDependencies.ANNOTATION
 }

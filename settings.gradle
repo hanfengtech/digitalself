@@ -1,3 +1,0 @@
-include ':features:home'
-include ':app'
-rootProject.name = "Digital Self"
