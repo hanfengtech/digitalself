@@ -1,1 +1,7 @@
 apply from: "$rootDir/common-android-dynamic-feature.gradle"
+
+dependencies {
+    implementation project(":features:me")
+    implementation project(":features:skills")
+    implementation project(Modules.COMMONS_UI)
+}

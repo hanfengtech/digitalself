@@ -31,7 +31,7 @@ android {
         dataBinding true
     }
 
-    dynamicFeatures = [':features:home']
+    dynamicFeatures = [':features:home', ':features:me', ':features:skills']
 }
 
 dependencies {

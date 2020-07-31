@@ -29,29 +29,9 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(Modules.APP)
 
-    implementation Dependencies.KOTLIN
-    implementation Dependencies.CORE_KTX
     implementation Dependencies.APPCOMPAT
-
-    // Architecture components
-    implementation Dependencies.CONSTRAIN_LAYOUT
     implementation Dependencies.NAVIGATION_FRAGMENT
     implementation Dependencies.NAVIGATION_UI
+    implementation Dependencies.CONSTRAIN_LAYOUT
 
-    // Dynamic feature
-    implementation Dependencies.PLAY_CORE
-    implementation Dependencies.PLAY_CORE_KTX
-    implementation Dependencies.NAVIGATION_DYNAMIC_FEATURES
-
-    // DI
-    implementation Dependencies.HILT
-
-    // 3rd Party
-    implementation Dependencies.TIMBER
-
-    // Testing
-    testImplementation TestDependencies.JUNIT
-    androidTestImplementation AndroidTestDependencies.JUNIT
-    androidTestImplementation AndroidTestDependencies.ESPRESSO
-    androidTestImplementation AndroidTestDependencies.ANNOTATION
 }

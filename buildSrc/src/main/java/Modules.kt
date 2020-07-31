@@ -2,10 +2,13 @@ object Modules {
     const val APP = ":app"
     const val CORE = ":core"
 
+    const val COMMONS_UI = ":commons:ui"
+    const val COMMONS_VIEWS = ":commons:views"
+
     object Features {
         const val HOME = ":features:home"
-        const val CHARACTERS_LIST = ":features:characters_list"
-        const val CHARACTERS_FAVORITES = ":features:characters_favorites"
+        const val ME = ":features:me"
+        const val SKILLS = ":features:skills"
     }
 
     object Commons {
