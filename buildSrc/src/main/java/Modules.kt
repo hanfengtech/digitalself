@@ -5,18 +5,9 @@ object Modules {
     const val COMMONS_UI = ":commons:ui"
     const val COMMONS_VIEWS = ":commons:views"
 
-    object Features {
-        const val HOME = ":features:home"
-        const val ME = ":features:me"
-        const val SKILLS = ":features:skills"
-    }
+    const val FEATURES_HOME = ":features:home"
+    const val FEATURES_SKILLS = ":features:skills"
+    const val FEATURES_ME = ":features:me"
 
-    object Commons {
-        const val UI = ":commons:ui"
-        const val VIEWS = ":commons:views"
-    }
-
-    object Libraries {
-        const val TEST_UTILS = ":libraries:test_utils"
-    }
+    const val LIB_TEST_UTILS = ":libraries:test_utils"
 }
