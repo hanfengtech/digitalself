@@ -34,7 +34,6 @@ fun BottomNavigationView.setupWithNavController(
     // First create a NavHostFragment for each NavGraph ID
     navGraphIds.forEachIndexed { index, navGraphId ->
         val fragmentTag = getFragmentTag(index)
-        println("Fragment TAG: $fragmentTag")
 
         // Find or create the Navigation host fragment
         val navHostFragment = obtainNavHostFragment(
@@ -173,14 +172,7 @@ private fun BottomNavigationView.setupItemReselected(
     fragmentManager: FragmentManager
 ) {
     setOnNavigationItemReselectedListener { item ->
-
-        println("ITEM SELECTED: ${item.itemId}")
-        graphIdToTagMap.forEach { key, value ->
-            println("Key: $key  Value: $value")
-        }
-
         val newlySelectedItemTag = graphIdToTagMap[item.itemId]
-        println("ITEM TAG: $newlySelectedItemTag")
         val selectedFragment = fragmentManager.findFragmentByTag(newlySelectedItemTag)
                 as NavHostFragment
         val navController = selectedFragment.navController

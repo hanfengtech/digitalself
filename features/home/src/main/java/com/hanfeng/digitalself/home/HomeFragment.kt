@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.hanfeng.digitalself.home.databinding.FragmentHomeBinding
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.navigation.ui.NavigationUI
 import com.hanfeng.digitalself.common.ui.ext.setupWithNavController
 
 class HomeFragment : Fragment() {
 
     private var viewBinding : FragmentHomeBinding? = null
+    private var viewModel : ViewModel? = null
 
     private val navGraphIds = listOf(
         R.navigation.nav_me_graph,
@@ -58,11 +61,6 @@ class HomeFragment : Fragment() {
      * Configure app bottom bar via navigation graph.
      */
     private fun setupBottomNavigationBar() {
-
-        navGraphIds.forEach {
-            println("Graph ID: $it")
-        }
-
         val navController = viewBinding?.bottomNavigation?.setupWithNavController(
             navGraphIds = navGraphIds,
             fragmentManager = childFragmentManager,
@@ -71,8 +69,8 @@ class HomeFragment : Fragment() {
         )
 
         navController?.observe(viewLifecycleOwner, Observer {
-           // viewModel.navigationControllerChanged(it)
-           // NavigationUI.setupActionBarWithNavController(requireCompatActivity(), it)
+            //viewModel.navigationControllerChanged(it)
+            //NavigationUI.setupActionBarWithNavController(requireCompatActivity(), it)
         })
     }
 }
