@@ -18,8 +18,8 @@ class HomeFragment : Fragment() {
     private var viewModel : ViewModel? = null
 
     private val navGraphIds = listOf(
-        R.navigation.nav_me_graph,
-        R.navigation.nav_skills_graph
+        R.navigation.nav_skills_graph,
+        R.navigation.nav_me_graph
     )
 
     override fun onCreateView(
