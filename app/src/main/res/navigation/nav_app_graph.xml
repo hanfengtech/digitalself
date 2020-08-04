@@ -10,5 +10,6 @@
         android:name="com.hanfeng.digitalself.home.HomeFragment"
         app:moduleName="DigitalSelf.features-home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 </navigation>

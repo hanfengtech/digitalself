@@ -28,7 +28,6 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-
         viewBinding = FragmentHomeBinding.inflate(inflater)
 
         return viewBinding?.root

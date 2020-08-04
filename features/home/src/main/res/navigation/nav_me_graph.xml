@@ -5,9 +5,18 @@
     android:id="@+id/nav_me_graph"
     app:startDestination="@+id/me_fragment"
     tools:ignore="UnusedNavigation">
+
     <fragment
         android:id="@+id/me_fragment"
         android:name="com.hanfeng.digitalself.me.MeFragment"
         android:label="Favorites">
+        <action
+            android:id="@+id/action_me_fragment_to_basicInfoFragment"
+            app:destination="@id/basicInfoFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/basicInfoFragment"
+        android:name="com.hanfeng.digitalself.me.BasicInfoFragment"
+        android:label="BasicInfoFragment" />
 </navigation>

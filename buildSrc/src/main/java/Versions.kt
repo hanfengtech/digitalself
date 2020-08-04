@@ -13,6 +13,7 @@ object Versions {
     const val PLAY_CORE_KTX = "1.7.0"
     const val NAVIGATION = "2.3.0"
     const val LEGACY_SUPPORT = "1.0.0"
+    const val SAVE_ARGS = "2.3.0"
 
     const val TIMBER = "4.7.1"
 
