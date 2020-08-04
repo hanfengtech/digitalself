@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_me_graph"
-    app:startDestination="@+id/meStepStoneFragment"
-    tools:ignore="UnusedNavigation">
+    app:startDestination="@+id/meForwardingFragment">
     <include app:graph="@navigation/nav_me_main_graph" />
     <fragment
-        android:id="@+id/meStepStoneFragment"
-        android:name="com.hanfeng.digitalself.home.MeStepStoneFragment"
-        android:label="fragment_me_step_stone"
-        tools:layout="@layout/fragment_me_step_stone">
+        android:id="@+id/meForwardingFragment"
+        android:name="com.hanfeng.digitalself.home.MeForwardingFragment"
+        android:label="fragment_me_forwarding"
+        tools:layout="@layout/fragment_me_forwarding">
         <action
             android:id="@+id/action_fragment_to_me_main_graph"
             app:destination="@id/nav_me_main_graph" />
