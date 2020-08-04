@@ -3,20 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_me_graph"
-    app:startDestination="@+id/me_fragment"
+    app:startDestination="@+id/meStepStoneFragment"
     tools:ignore="UnusedNavigation">
-
+    <include app:graph="@navigation/nav_me_main_graph" />
     <fragment
-        android:id="@+id/me_fragment"
-        android:name="com.hanfeng.digitalself.me.MeFragment"
-        android:label="Favorites">
+        android:id="@+id/meStepStoneFragment"
+        android:name="com.hanfeng.digitalself.home.MeStepStoneFragment"
+        android:label="fragment_me_step_stone"
+        tools:layout="@layout/fragment_me_step_stone">
         <action
-            android:id="@+id/action_me_fragment_to_basicInfoFragment"
-            app:destination="@id/basicInfoFragment" />
+            android:id="@+id/action_fragment_to_me_main_graph"
+            app:destination="@id/nav_me_main_graph" />
     </fragment>
-
-    <fragment
-        android:id="@+id/basicInfoFragment"
-        android:name="com.hanfeng.digitalself.me.BasicInfoFragment"
-        android:label="BasicInfoFragment" />
 </navigation>

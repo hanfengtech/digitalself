@@ -1,7 +1,9 @@
 apply from: "$rootDir/common-android-dynamic-feature.gradle"
+apply plugin: 'kotlin-android'
 
 dependencies {
     implementation project(Modules.FEATURES_SKILLS)
     implementation project(Modules.FEATURES_ME)
     implementation project(Modules.COMMONS_UI)
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

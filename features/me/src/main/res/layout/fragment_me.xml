@@ -29,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txt_username"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -67,7 +67,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clBasic"
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
                 android:id="@+id/imgBasic"
@@ -109,7 +110,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:id="@+id/clAccount"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
                 android:id="@+id/imgAccount"
@@ -151,7 +154,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:id="@+id/clEmployment"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
                 android:id="@+id/imgEmployment"
@@ -193,7 +198,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:id="@+id/clProperty"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
                 android:id="@+id/imgProperty"
@@ -234,26 +241,28 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:id="@+id/clEducation"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
-                android:id="@+id/imgSchool"
+                android:id="@+id/imgEdcation"
                 android:layout_width="58dp"
                 android:layout_height="77dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/school"
+                android:src="@drawable/education"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtSchool"
+                android:id="@+id/txtEducation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="School"
+                android:text="Education"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgSchool"
+                app:layout_constraintStart_toEndOf="@+id/imgEdcation"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -276,7 +285,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="69dp">
+            android:layout_height="69dp"
+            android:id="@+id/clBusiness"
+            android:background="@drawable/view_ripple_background">
 
             <ImageView
                 android:id="@+id/imgBusiness"
